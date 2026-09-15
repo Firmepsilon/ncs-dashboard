@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'http://127.0.0.1:5000',
+  baseURL: '/api',
   timeout: 10000,
 })
 
@@ -20,40 +20,40 @@ request.interceptors.response.use(
 // ========== 接口列表 ==========
 
 // 探活
-export const getHealth = () => request.get('/api/health')
+export const getHealth = () => request.get('/health')
 
 // 顶部 KPI
-export const getKpi = () => request.get('/api/kpi')
+export const getKpi = () => request.get('/kpi')
 
 // 平台分布
-export const getPlatform = () => request.get('/api/platform')
+export const getPlatform = () => request.get('/platform')
 
 // 24小时趋势
-export const getHourTrend = () => request.get('/api/hour-trend')
+export const getHourTrend = () => request.get('/hour-trend')
 
 // 桩型偏好
-export const getStationType = () => request.get('/api/station-type')
+export const getStationType = () => request.get('/station-type')
 
 // TOP10站点
-export const getStationTop10 = () => request.get('/api/station-top10')
+export const getStationTop10 = () => request.get('/station-top10')
 
 // SOC雷达
-export const getSocRadar = () => request.get('/api/soc-radar')
+export const getSocRadar = () => request.get('/soc-radar')
 
 // 小时×区域堆叠
-export const getHourArea = () => request.get('/api/hour-area')
+export const getHourArea = () => request.get('/hour-area')
 
 // 区域KPI
-export const getAreaKpi = () => request.get('/api/area-kpi')
+export const getAreaKpi = () => request.get('/area-kpi')
 
 // 用户分级
-export const getUserLevel = () => request.get('/api/user-level')
+export const getUserLevel = () => request.get('/user-level')
 
 // 工作日vs周末
-export const getWeekCompare = () => request.get('/api/week-compare')
+export const getWeekCompare = () => request.get('/week-compare')
 
 // 电池健康
-export const getBatteryHealth = () => request.get('/api/battery-health')
+export const getBatteryHealth = () => request.get('/battery-health')
 
 // 用户雷达
-export const getUserRadar = () => request.get('/api/user-radar')
+export const getUserRadar = () => request.get('/user-radar')
